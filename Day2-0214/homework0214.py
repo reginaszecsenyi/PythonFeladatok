@@ -10,13 +10,13 @@ Kérjünk be a felhasználótól folyamatosan szövegeket, amíg 'exit' utasít�
 """
 
 #1. feladat megoldása jöhet ide
-while True:
-    szoveg = input('Adj meg egy szöveget: ')
-    if szoveg.lower() != 'exit':
-        print(szoveg + ' --> '+ szoveg[::-1])
-    else:
-        print('Bye')
-        break
+# while True:
+#     szoveg = input('Adj meg egy szöveget: ')
+#     if szoveg.lower() != 'exit':
+#         print(szoveg + ' --> '+ szoveg[::-1])
+#     else:
+#         print('Bye')
+#         break
 
 # exit = False
 # while not exit:
@@ -42,14 +42,15 @@ Kimenetként
 
 # 2. feladat megoldása jöhet ide
 
-szam = int(input('Hány számot szeretne megadni? '))
-lista = []
-for x in range(szam):
-    lista.append(x)
-print(lista)
-print(lista[::2])
-lista.sort(reverse=True)
-print(lista)
+# szam = int(input('Hány számot szeretne megadni? '))
+# lista = []
+# for x in range(szam):
+#     givennumber = int(input('Add meg a számot: '))
+#     lista.append(x)
+# print(lista)
+# print(lista[::2])
+# lista.sort(reverse=True)
+# print(lista)
 
 """---------------------------------------------------------------------------------------------------------------------
 3. feladat 
@@ -61,7 +62,7 @@ Ha nem --> kérdezzük meg, hogy csökkenő vagy növekvő sorrendben szeretné-
 """
 
 # 3. feladat megoldása jöhet ide
-# nev = input('Adjon meg egy nevet: ')
+
 nevlista = []
 while True:
     nev = input('Adjon meg egy nevet: ')
@@ -71,15 +72,15 @@ while True:
         continue
     else:
         sorrend = input('Növekvő vagy csökkenő sorrendet szeretne? ')
-        if sorrend == 'növekvő':
+        if sorrend.lower() == 'növekvő':
             nevlista.sort()
             print(nevlista)
-        else:
+        elif sorrend.lower() == 'csökkenő':
             nevlista.sort(reverse=True)
             print(nevlista)
-        break
-
-
+        else:
+            print('Invalid answer')
+    break
 
 
 """---------------------------------------------------------------------------------------------------------------------

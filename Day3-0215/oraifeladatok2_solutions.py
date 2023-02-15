@@ -5,17 +5,17 @@ Viszont, ha a szám nagyobb mint 100, akkor, azt hagyd figyelmen kívül és lé
 Ha 250-nél is nagyobb a szám, fejezd be a kiíratást.
 A számok: 8, 10, 75, 149, 64, 89, 225, 5, 145, 260, 1, 50
 '''
-print("***Megoldás***")
-szamok = [8, 10, 75, 149, 64, 89, 225, 5, 145, 260, 1, 50]
-
-for sz in szamok:
-    if sz > 250:
-        break
-    if sz > 100 and sz <= 250:
-        continue
-    if sz % 5 == 0:
-        print(sz)
-
+# print("***Megoldás***")
+# szamok = [8, 10, 75, 149, 64, 89, 225, 5, 145, 260, 1, 50]
+#
+# for sz in szamok:
+#     if sz > 250:
+#         break
+#     if sz > 100 and sz <= 250:
+#         continue
+#     if sz % 5 == 0:
+#         print(sz)
+#
 
 print('************ 7. feladat ******************')
 '''
@@ -27,13 +27,13 @@ print("***Megoldás***")
 # nr = 8965
 # print(len(str(nr)))
 
-print('\n----B verzió----')
-nr = 8965
-szamlalo = 0
-while nr != 0:
-    szamlalo += 1
-    nr = nr // 10
-print(szamlalo)
+# print('\n----B verzió----')
+# nr = 8965
+# szamlalo = 0
+# while nr != 0:
+#     szamlalo += 1
+#     nr = nr // 10
+# print(szamlalo)
 
 
 
@@ -41,13 +41,13 @@ print('************ 8. feladat ******************')
 '''
 Írj egy szkriptet, ami bekér a felhasználótól egy egész számot, majd írasd ki ennek a számnak az egész osztóit!
 '''
-print("***Megoldás***")
-user_szama = int(input('Írj egy egész számot : '))
-osztok = []
-for i in range(user_szama):
-    if user_szama % (i + 1) == 0:
-        osztok.append(i + 1)
-print(f'{user_szama} egész osztói:\n{osztok}')
+# print("***Megoldás***")
+# user_szama = int(input('Írj egy egész számot : '))
+# osztok = []
+# for i in range(user_szama):
+#     if user_szama % (i + 1) == 0:
+#         osztok.append(i + 1)
+# print(f'{user_szama} egész osztói:\n{osztok}')
 
 
 
@@ -55,22 +55,22 @@ print('************ 9. feladat ******************')
 '''
 Készíts egy szkriptet, ami kiírja a képrenyőre, hogy a felhasználótól bekért szám páros vagy páratlan?
 '''
-print("***Megoldás***")
-print('\n----A verzió----')
-nr = input("Adj meg egy számot: ")
-
-if int(nr) % 2 == 0:
-    print(nr + ' -> páros szám')
-elif int(nr) % 2 == 1:
-    print(nr + " -> páratlan szám")
-
-print('\n----B verzió----')
-num = int(input("Adj meg egy számot: "))
-mod = num % 2
-if mod > 0:
-    print(f'A(z) {num} páratlan szám.')
-else:
-    print(f"A(z) {num} páros szám.")
+# print("***Megoldás***")
+# print('\n----A verzió----')
+# nr = input("Adj meg egy számot: ")
+#
+# if int(nr) % 2 == 0:
+#     print(nr + ' -> páros szám')
+# elif int(nr) % 2 == 1:
+#     print(nr + " -> páratlan szám")
+#
+# print('\n----B verzió----')
+# num = int(input("Adj meg egy számot: "))
+# mod = num % 2
+# if mod > 0:
+#     print(f'A(z) {num} páratlan szám.')
+# else:
+#     print(f"A(z) {num} páros szám.")
 
 
 print('************ 10. feladat ******************')

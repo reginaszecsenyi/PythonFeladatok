@@ -43,11 +43,11 @@ print('************ 3. feladat ******************')
 Add meg egy felhasználótól bekért szó páratlan helyen lévő betűjeit és írasd őket ki! (pl. alma esetén a megoldás a,m)
 '''
 print("***Megoldás***")
-# user_string = input("Adj meg egy szót! : ")
+#user_string = input("Adj meg egy szót! : ")
 #
 # print('\n----A verzió----')
 # print(user_string[0::2])
-# print(type(user_string[0::2]))
+#print(type(user_string[0::2]))
 #
 # print('\n----B verzió----')
 # for s in user_string[0::2]:
@@ -69,9 +69,10 @@ print("***Megoldás***")
 
 print('************ 4. feladat ******************')
 '''
-Készíts egy öt elemű felhasználótól bekért törtszám listát! Jelenítsd meg a képernyőn a listát!
+Készíts egy öt elemű felhasználótól bekért törtszám listát! 
+Jelenítsd meg a képernyőn a listát!
 '''
-print("***Megoldás***")
+# print("***Megoldás***")
 # user_list = []
 # print("Make a 5 element list!")
 # for i in range(1, 6):
