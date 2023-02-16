@@ -63,15 +63,38 @@ print('************ 14. feladat ******************')
 A sor kezdődjön 0-val és 1-gyel.
 (Fibonacci sor: két egymást követő elem összege egyenlő a követő elemmel. 0,1,1,2,3,5,8,13,21,34
 '''
-f0 = 0
-f1 = 1
-print(f0)
-print(f1)
-sorszam = 1
-while sorszam < 9:
-    print((f1-1) + (f1-2))
-    f1 += 1
-    sorszam += 1
+#nemjó
+# f0 = 0
+# f1 = 1
+# print(f0)
+# print(f1)
+# sorszam = 1
+# while sorszam < 9:
+#     print((f1-1) + (f1-2))
+#     f1 += 1
+#     sorszam += 1
+#------------------------------
+
+n1 = 0
+n2 = 1
+
+szamlalo = 0
+
+while szamlalo < 9:
+    print(n1)
+    nth = n1 + n2
+    n1 = n2
+    n2 = nth
+
+    szamlalo += 1
+
+#------------------------------
+fibonacci = [0,1]
+for x in range(10):
+    if x == 0:
+    continue
+
+fibonacci.append(fibonacci[x-1] + fibonacci[x])
 
 print('************ 15. feladat ******************')
 '''
