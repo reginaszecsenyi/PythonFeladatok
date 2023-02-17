@@ -1,6 +1,6 @@
 i = 1
 
-while not (i == 19 or i == 22):
+while not (i == 19 or i == 22): #while i != 19 and i != 22:
     if i == 1:
         print('''Te vagy az iskola rosszfiúja. Késve érkezel a suli elé, még elszívod a cigidet, aztán…
   2. elnyomod a csikket az igazgatónő bringájának kerekébe.
