@@ -126,26 +126,26 @@ SZORGALMI
 A megadott stringben keressük meg az összes 'sör' előfordulást és tároljuk el az indexüket egy listában
 """
 
-# sentence = 'Egy sör nem sör. 2 sör fél sör. 4 sör 1 sör. 1 sör meg nem sör...'
-# substring = 'sör'   # Meg lehet próbálni más értékkel is: '1', 'nem', 'nem sör'
-# length = len(substring)
-# indeces = []
-#
-# # Megoldási ötlet: karakterenként végigmegyek a stringen
-# # és a keresett szövegrészt próbálom illeszteni.
-# # Ha találok illeszkedést, akkor felveszem a listába az aktuális indexet.
-# # Ha nem, akkor megyek eggyel tovább.
-#
-# for index in range(len(sentence) - length):
-#     # range: a teljes szöveg hosszából kivonom a keresett szöveg hosszát,
-#     # hogy ne fussak túl a végén.
-#     if sentence[index:index+length] == substring:
-#         # az adott indexről indulva megnézem, hogy a következő karaktersorozat megegyezik-e a keresett értékkel
-#         # ha igen, akkor felveszem az indexet a listámba.
-#         indeces.append(index)
-#
-# print(indeces)
-#
-# # Csak ellenőrzés: valóban a megfelelő szövegeket találtam meg?
-# for i in indeces:
-#     print(sentence[i:i+length])
+sentence = 'Egy sör nem sör. 2 sör fél sör. 4 sör 1 sör. 1 sör meg nem sör...'
+substring = 'sör'   # Meg lehet próbálni más értékkel is: '1', 'nem', 'nem sör'
+length = len(substring)
+indeces = []
+
+# Megoldási ötlet: karakterenként végigmegyek a stringen
+# és a keresett szövegrészt próbálom illeszteni.
+# Ha találok illeszkedést, akkor felveszem a listába az aktuális indexet.
+# Ha nem, akkor megyek eggyel tovább.
+
+for index in range(len(sentence) - length):
+    # range: a teljes szöveg hosszából kivonom a keresett szöveg hosszát,
+    # hogy ne fussak túl a végén.
+    if sentence[index:index+length] == substring:
+        # az adott indexről indulva megnézem, hogy a következő karaktersorozat megegyezik-e a keresett értékkel
+        # ha igen, akkor felveszem az indexet a listámba.
+        indeces.append(index)
+
+print(indeces)
+
+# Csak ellenőrzés: valóban a megfelelő szövegeket találtam meg?
+for i in indeces:
+    print(sentence[i:i+length])

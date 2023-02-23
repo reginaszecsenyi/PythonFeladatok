@@ -63,24 +63,24 @@ Ha nem --> kérdezzük meg, hogy csökkenő vagy növekvő sorrendben szeretné-
 
 # 3. feladat megoldása jöhet ide
 
-nevlista = []
-while True:
-    nev = input('Adjon meg egy nevet: ')
-    nevlista.append(nev)
-    valasztas = input('Akar-e még nevet felvenni? ')
-    if valasztas == 'igen':
-        continue
-    else:
-        sorrend = input('Növekvő vagy csökkenő sorrendet szeretne? ')
-        if sorrend.lower() == 'növekvő':
-            nevlista.sort()
-            print(nevlista)
-        elif sorrend.lower() == 'csökkenő':
-            nevlista.sort(reverse=True)
-            print(nevlista)
-        else:
-            print('Invalid answer')
-    break
+# nevlista = []
+# while True:
+#     nev = input('Adjon meg egy nevet: ')
+#     nevlista.append(nev)
+#     valasztas = input('Akar-e még nevet felvenni? ')
+#     if valasztas == 'igen':
+#         continue
+#     else:
+#         sorrend = input('Növekvő vagy csökkenő sorrendet szeretne? ')
+#         if sorrend.lower() == 'növekvő':
+#             nevlista.sort()
+#             print(nevlista)
+#         elif sorrend.lower() == 'csökkenő':
+#             nevlista.sort(reverse=True)
+#             print(nevlista)
+#         else:
+#             print('Invalid answer')
+#     break
 
 
 """---------------------------------------------------------------------------------------------------------------------
@@ -93,6 +93,41 @@ A játék 5 győzelemig tart. Aki előbb eléri az 5 körgyőzelmet, az lesz a n
 """
 
 # 4. feladat megoldása jöhet ide
+
+# import random
+#
+# number_player = 0
+# number_computer = 0
+#
+# player_win = 0
+# computer_win = 0
+#
+# while player_win < 5 and computer_win < 5:
+#     print()
+#     input('Következő körhöz nyomj entert.')
+#
+#     number_player = random.randint(1, 6)
+#     print(f'Player: {number_player}')
+#
+#     number_computer = random.randint(1, 6)
+#     print(f'Computer: {number_computer}')
+#
+#     if number_computer == number_player:
+#         print('Ugyanakkorát dobtak, újra dobunk.')
+#         continue
+#     elif number_player > number_computer:
+#         player_win += 1
+#         print(f'Player nyert. Player nyeréseinek száma: {player_win}')
+#     elif number_computer > number_player:
+#         computer_win += 1
+#         print(f'Computer nyert. Computer nyeréseinek száma: {computer_win}')
+#
+# print()
+# print('A játéknak vége. ')
+# if player_win == 5:
+#     print('Player nyert.')
+# else:
+#     print('Computer nyert.')
 
 """---------------------------------------------------------------------------------------------------------------------
 SZORGALMI
