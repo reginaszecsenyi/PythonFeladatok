@@ -1,0 +1,66 @@
+
+WHILE CIKLUS
+
+Előltesztelő: a kódblokk futtatása előtt vizsgálja meg a feltételt, ami ha igaz, akkor végrehajta az utasítást.
+
+while num <= 10:
+    print(f'Következő szám: {num}')
+    num += 1    # num = num + 1num = 1
+
+
+while True:
+    actual_value = input('Adj meg adatot: ')
+    print(actual_value + " OK")
+    if actual_value == 'quit':
+        break
+
+Kapcsolós megoldás
+
+quit = False
+while not quit:
+    actual_value = input('Adj meg adatot: ')
+    print(actual_value + " OK")
+    if actual_value == 'quit':
+        quit = True
+
+-----------------------------------------------------------------
+
+FOR CIKLUS
+
+for x in range(100):
+    print(x)
+    if x == 50:
+        break
+
+-----------------------------------------------------------------
+
+TÖMBÖK - LIST
+
+numbers = [1, 42, 34, 87, 2, 32]
+names = ['Anna', 'Berta', 'Cecilia', 'Diana']
+mixed = ['Buksi', 3, True, ['Hogolyo', 'Morgos']] # Nem ajánlott
+kolykok = mixed[3]
+
+
+print(names[2])
+print(names[1:3])
+print(f'A nevek lista hossza: {len(names)}')
+
+print(mixed[3][0]) --> Hogolyo
+print(mixed[0][0]) --> B
+# A stringek elemei is indexelhetők!
+
+# TÖMB MŰVELETEK
+
+names = list() = []
+names.append()          # a lista végéhez fűz hozzá
+names.pop()             # utolsó elemet kiveszi
+names.remove()          #törlés
+del names[1]            #törlés
+names.sort()            #sorba rendezés
+names.sort(reverse=True)
+
+names.insert(0, last_element)
+
+plus_names = ['Aba', 'Samuel', 'Hapci', 'Tudor', 'Hofeherke']
+names.extend(plus_names)

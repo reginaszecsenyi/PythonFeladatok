@@ -1,0 +1,17 @@
+FELNŐTT
+- Cipő
+- Kabát
+- Sál
+- Zokni
+- Kesztyű
+- Kendő
+- Cilinder
+- Nadrág
+PIROS
+- Cilinder
+- Szandál
+- Mamusz
+- Fürdő köpeny
+- Zokni
+- Kalap
+- Trikó

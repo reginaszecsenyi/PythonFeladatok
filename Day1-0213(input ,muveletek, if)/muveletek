@@ -1,0 +1,76 @@
+Műveletek számokkal
+
+x = 5
+y = 4
+print()
+print('Műveletek 5-re és 4-re')
+print('Összeadás:', x + y)
+print('Kivonás:', x - y)
+print('Szorzás:', x * y)
+print('Összetett:', (x * y) - (x + y))
+print('Hatványozás:', x**2)
+
+print('Osztás:', x / y)
+print('Osztás (egész rész):', x // y)
+print('Maradékos osztás:', x % y)
+
+----------------------------------------------------
+
+Összehasonlítások
+
+a = 10
+b = 10
+c = 15
+print('Megegyezés', a == b)
+print('Megegyezés', a == c)
+print('Nem egyenlő: ', a != c) # True
+
+Összehasonlítások: <, >, <=, >=
+
+print('Kisebb, mint', a < c)
+print('Intervallum: ', 0 < a < c)
+
+----------------------------------------------------
+Műveletek szöveggel
+
+
+Indexek:0-tól indul
+name = 'István'
+print(name[0]) --> I
+print(name[2]) --> t
+
+# SLICING
+
+print(szoveg[0:6])      # [start:end] end már nincs benne a visszaadott értékek között
+print(szoveg[7:24])
+print(szoveg)           # eredeti érték nem változik
+print(szoveg[::2])      # [start:end:step]
+print(szoveg[-1])       # Mínusz értékek - hátulról kezdje
+print(szoveg[-2])
+print(szoveg[::-1])     # Visszafele írassuk ki az értékeket.
+
+# BEÉPÍTETT METÓDUSOK
+
+print(szoveg.capitalize())
+print(szoveg.upper())
+print(szoveg.lower())
+print(szoveg.startswith('K'))
+print(szoveg.endswith('3'))
+
+# SUBSTRINGES
+
+print('Tartalmazza: ', substring in sentence)
+
+print('Hányszor: ', sentence.count(substring))
+
+print('Hol található (index):', sentence.find(substring)) # Csak az első találat helyét adja vissza
+
+sentence_wine = sentence.replace(substring, 'bor')
+
+szoveg_egysegek = sentence.split() # Alapértelmezés: space
+
+sentence_comma = sentence.replace(' ', ';')
+
+szoveg_egysegek = sentence_comma.split(';')
+
+

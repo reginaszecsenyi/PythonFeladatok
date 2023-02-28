@@ -1,0 +1,17 @@
+INPUT
+
+name = input('Kérlek, add meg a neved: ')
+age = int(input('Kérlek, add meg az életkorod: ')) # TÍPUS KONVERZIÓ!!!
+
+----------------------------------------------------
+
+CONDITIONS - IF, ELIF, ELSE
+
+number = 25
+
+if number > 30:
+    print('Nagyobb, mint 30')
+elif number < 30:
+    print('Kisebb, mint 30')
+else:
+    print('A számom pontosan 30')
