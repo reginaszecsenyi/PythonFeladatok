@@ -18,3 +18,22 @@
 # Bármilyen megoldás ami a fenti tesztadatokra (és hasonló tesztadatokra) a helyes megoldást adja tökéletesen megfelel.
 # Nincs pontlevonás ha lehetne ezt egyszerűbben is.
 # Nincs plusz pont ha kevesebb sorból oldod meg.
+
+
+
+
+numberlist = []
+
+def task4(a, b):
+
+    for n in range(a, b + 1):
+        numberlist.append(n)
+    return numberlist
+
+
+print('Adj meg két számot, egy számlista első és utolsó értékét!')
+a = int(input('Az első szám: '))
+b = int(input('A második szám: '))
+
+
+print(task4(a, b))

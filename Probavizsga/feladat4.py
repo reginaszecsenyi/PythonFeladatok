@@ -1,4 +1,4 @@
-4. Feladat: Speciális számok kiválasztása.
+#4. Feladat: Speciális számok kiválasztása.
 # Nevezzük speciálisnak azokat a számokat, amelyek 11 többszörösei (másként fogalmazva oszthatók 11-el) vagy pont 1-el nagyobbak, mint 11 valamelyik többszöröse.
 #
 # írj egy olyan Python függvényt, ami megkapja a tesztelendő számot paraméterként és visszaadja, hogy a kérdéses szám az speciális-e vagy nem. Ezt igaz/hamis formájában várjuk!

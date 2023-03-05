@@ -22,6 +22,7 @@ user_input_b = int(input('Give an integer number : '))
 
 print(rev_num1(user_input_a, user_input_b))
 
+
 # # 2. verzió
 # def rev_num2(x_nr, y_nr):
 #     return list(range(x_nr, y_nr + 1))

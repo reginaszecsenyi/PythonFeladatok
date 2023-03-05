@@ -91,7 +91,7 @@ submit_btn.click()
 
 time.sleep(1)
 
-# error_msg = len(browser.find_element(By.XPATH, '//div[@class="validation-error"]')) > 0
+assert len(browser.find_elements(By.XPATH, '//div[@class="validation-error"]')) == 0
 
 # try:
 #     error_msg = browser.find_element(By.XPATH, '//div[@class="validation-error"]')

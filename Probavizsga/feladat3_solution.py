@@ -1,35 +1,72 @@
-import time
-
+'''
+Feladat:
+Az alkalmazás akkor működik helyesen ha 100 gombnyomásból legalább 30 fej. Ezt kell ellenőrizned.
+'''
+# # importok
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.common.keys import Keys
 
-service = Service(executable_path=r'C:\Users\Szabi\Desktop\Újratervezés program\Automata szoftvertesztelő\selenium\chromedriver.exe')
-options = Options()
-options.add_experimental_option('detach', True)
-browser = webdriver.Chrome(service=service, options=options)
+import time
+
+# PATH = "S:\oktatási anyagok\chromedriver.exe"
+# s = Service(executable_path=PATH)
+# # alap beállítások
+s = Service(executable_path=ChromeDriverManager().install())
+o = Options()
+o.add_experimental_option("detach", True)
+browser = webdriver.Chrome(service=s, options=o)
 
 URL = 'https://svtesztelovizsga.blob.core.windows.net/$web/proba-vizsga/penzfeldobas.html'
 browser.get(URL)
 
-browser.maximize_window()
+# 1. verzió
+pf_gomb = browser.find_element(By.ID, 'submit')
+fej_szamlalo = 0
 
-#Feladatod, hogy automatizáld selenium webdriverrel a pénzfeldobás app tesztelését.
-#Az alkalmazás akkor működik helyesen ha 100 gombnyomásból legalább 30 fej. Ezt kell ellenőrizned.
+for i in range(100):
+    pf_gomb.click()
+    if browser.find_element(By.ID, 'lastResult').text == 'fej':
+        fej_szamlalo += 1
 
-throw_btn = browser.find_element(By.ID, 'submit')
+assert fej_szamlalo >= 30
+print(fej_szamlalo)
 
-for x in range(101):
-    throw_btn.click()
+# # 2. verzió-------------------------------------------------------------
+pf_gomb = browser.find_element(By.ID, 'submit')
+fej_szamlalo = 0
 
-results = browser.find_element(By.ID, "results")
-print(results.text)
+tesztelendo_dobas_szam = 100
+for i in range(tesztelendo_dobas_szam):
+    pf_gomb.click()
 
-print(results.text.count('fej'))
-if results.text.count('fej') >= 30:
-    print('Az alkalmazás helyesen működik')
-else:
-    print('Az alkalmazás nem működik helyesen')
+dobasok = browser.find_elements(By.TAG_NAME, 'li')
+
+for dobas in dobasok:
+    if dobas.text == 'fej':
+        fej_szamlalo += 1
+
+assert fej_szamlalo >= 30
+print(fej_szamlalo)
+
+# # 3. verzió--------------------------------------------------------------------------
+# try:
+#     minimum = 30
+#     pf_gomb = browser.find_element(By.ID, 'submit')
+#     fej_lista = []
+#
+#     for i in range(100):
+#         pf_gomb.click()
+#         if browser.find_element(By.ID, 'lastResult').text == 'fej':
+#             fej_lista.append('fej')
+#
+#     assert len(fej_lista) >= minimum
+#     print(len(fej_lista))
+#
+# except AssertionError:
+#     print(f'A fejek száma csak: {len(fej_lista)}, ez nem éri el a {minimum} minimum értéket.')
+
+# # Böngésző bezárása
+browser.quit()

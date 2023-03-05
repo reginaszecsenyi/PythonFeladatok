@@ -34,14 +34,18 @@ browser.maximize_window()
 
 throw_btn = browser.find_element(By.ID, 'submit')
 
-for x in range(101):
+for x in range(100):
     throw_btn.click()
 
 results = browser.find_element(By.ID, "results")
 print(results.text)
 
 print(results.text.count('fej'))
-if results.text.count('fej') >= 30:
-    print('Az alkalmazás helyesen működik')
-else:
-    print('Az alkalmazás nem működik helyesen')
+# if results.text.count('fej') >= 30:
+#     print('Az alkalmazás helyesen működik')
+# else:
+#     print('Az alkalmazás nem működik helyesen')
+
+assert results.text.count('fej') >= 30
+
+browser.quit()
